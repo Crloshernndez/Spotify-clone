@@ -9,6 +9,17 @@ front end
         * {
             margin: 0,
         }
+    
+    3- creamos componente login
+        * importamos estilos
+        
+    4- creamos spotify.js file
+        * pegamos la client ID clave que nos da spotify
+        * agregamos los scopes que usaremos en la app de spotify
+        * creamos la const urllogin donde asignamos la url con las variables creadas
+            loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+                        "%20"
+                        )}&response_type=token&show_dialog=true`;
 
 spotify developers
     * go to dashboard 
