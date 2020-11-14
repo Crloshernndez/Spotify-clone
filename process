@@ -1,0 +1,24 @@
+firebase
+    1- creamos proyecto 
+
+__________________________________________________________________________________________________________
+front end
+    1- instalamos los paquetes para la app escribiendo en la terminal
+        "npx create-react-app"
+    2- limpiamos el directior de los archivos imnecesarios y borramos estilos predeterminados de App.css y agregamos en index.css:
+        * {
+            margin: 0,
+        }
+
+spotify developers
+    * go to dashboard 
+    * accept terms and conditions
+    * click button "My new app"
+    * aparecera un modal con dos input 
+        nombre de la app
+        description
+        aceptar terminos y condiciones
+    * nos aparecera la pantalla de la app con la clave ID
+         "077a9b72e81c400eaeb4c39018de100c"
+    * en edit setting, en Redirect URIs
+        copiamos url de nuestra app "http://localhost:3000/" y click en "add" ==> click en " save "
