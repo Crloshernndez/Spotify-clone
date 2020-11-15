@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Login from "./pages/Login";
+import Player from "./pages/Player";
 import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 
@@ -27,7 +28,7 @@ function App() {
     console.log("I HAVE A TOKEN >>>", token);
   }, []);
 
-  return <div className="app">{token ? <h1>I am login</h1> : <Login />}</div>;
+  return <div className="app">{token ? <Player /> : <Login />}</div>;
 }
 
 export default App;
