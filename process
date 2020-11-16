@@ -20,6 +20,7 @@ front end
             loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
                         "%20"
                         )}&response_type=token&show_dialog=true`;
+    5- en App component escribimos la logipa para obtener el token desde spotify dentro de un useEffect
 
 spotify developers
     * go to dashboard 
