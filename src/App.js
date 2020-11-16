@@ -4,10 +4,12 @@ import Login from "./pages/Login";
 import Player from "./pages/Player";
 import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
+import { connect } from "react-redux";
+import { setUser, setTokenToStore } from "./action";
 
 const spotify = new SpotifyWebApi();
 
-function App() {
+function App(props) {
   const [token, setToken] = useState(null);
 
   useEffect(() => {
@@ -19,16 +21,23 @@ function App() {
       setToken(_token);
 
       spotify.setAccessToken(_token);
-
       spotify.getMe().then((user) => {
-        console.log("person", user);
+        props.setUser(user);
+        props.setTokenToStore(_token);
       });
     }
-
-    console.log("I HAVE A TOKEN >>>", token);
   }, []);
 
-  return <div className="app">{token ? <Player /> : <Login />}</div>;
+  return (
+    <div className="app">
+      {token ? <Player spotify={spotify} /> : <Login />}
+    </div>
+  );
 }
 
-export default App;
+const mapDispatchToProps = {
+  setUser,
+  setTokenToStore,
+};
+
+export default connect(null, mapDispatchToProps)(App);

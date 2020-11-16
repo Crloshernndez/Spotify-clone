@@ -1,12 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import reducer from "./reducer";
+import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, compose } from "redux";
-import reducer from "./reducer";
-import initialState from "./initialState";
+import { initialState } from "./initialState";
+import reportWebVitals from "./reportWebVitals";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, initialState, composeEnhancers());
