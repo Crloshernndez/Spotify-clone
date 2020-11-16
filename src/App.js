@@ -5,7 +5,7 @@ import Player from "./pages/Player";
 import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import { connect } from "react-redux";
-import { setUser, setTokenToStore } from "./action";
+import { setUser, setTokenToStore, setPlaylist } from "./action";
 
 const spotify = new SpotifyWebApi();
 
@@ -25,6 +25,10 @@ function App(props) {
         props.setUser(user);
         props.setTokenToStore(_token);
       });
+
+      spotify.getUserPlaylists().then((playlist) => {
+        props.setPlaylist(playlist);
+      });
     }
   }, []);
 
@@ -38,6 +42,7 @@ function App(props) {
 const mapDispatchToProps = {
   setUser,
   setTokenToStore,
+  setPlaylist,
 };
 
 export default connect(null, mapDispatchToProps)(App);
