@@ -12,3 +12,8 @@ export const setPlaylist = (payload) => ({
   type: "SET_PLAYLIST",
   playlist: payload,
 });
+
+export const setAlbum = (payload) => ({
+  type: "SET_ALBUM",
+  album: payload,
+});

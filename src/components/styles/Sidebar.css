@@ -6,6 +6,7 @@
   padding-left: 10px;
   padding-right: 10px;
   min-width: 230px;
+  overflow-y: overlay;
 }
 
 .sidebar__logo {

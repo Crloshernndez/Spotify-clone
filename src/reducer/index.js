@@ -17,6 +17,12 @@ const reducer = (state, action) => {
         ...state,
         playlist: action.playlist,
       };
+
+    case "SET_ALBUM":
+      return {
+        ...state,
+        album: action.album,
+      };
     default:
       return state;
   }

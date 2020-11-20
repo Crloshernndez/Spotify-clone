@@ -1,0 +1,38 @@
+.songRow {
+  margin-left: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  color: white;
+}
+
+.songRow:hover {
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.songRow__info-left {
+  margin-left: 20px;
+}
+
+.songRow__info-left h1 {
+  font-size: 16px;
+}
+
+.songRow__info-left p {
+  font-size: 14px;
+  margin-top: 3px;
+  color: gray;
+}
+
+.songRow__info-rigth {
+  display: flex;
+  align-items: center;
+}
+
+.songRow__info-rigth p {
+  margin-left: 20px;
+}

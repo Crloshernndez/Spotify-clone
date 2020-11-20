@@ -3,4 +3,5 @@ export const initialState = {
   playlist: [],
   playing: false,
   item: null,
+  album: null,
 };
